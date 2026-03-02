@@ -1,44 +1,38 @@
 .footer {
-  background-color: $brown;
-  color: $white;
-  border-top: 1px solid #705a3f;
-  text-align: center;
-
-  &__nav {
-    border-bottom: 1px solid #705a3f;
-  }
-
-  &__list {
+  .office__card {
     display: flex;
-    width: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__item {
-    flex: 1;
-    padding: $spacing-md;
-    border-right: 1px solid #705a3f;
-    font-size: $font-size-sm;
-    line-height: 1.5;
-
-    &:last-child {
-      border-right: none;
+    flex-direction: row;
+    margin-top: 4.8rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 12rem;
+    margin-left: 13rem;
+    &-content {
+      font-size: 1.5rem;
+      line-height: 2.27;;
+    }
+    &-info {
+      border-width: 0.3125rem;
+      border-style: solid;
+      border-color: #c7d2b5;
+      background-color: #e6ead3;
+      color: #8B6950;
+      width: 61rem;
+      height: 13.25rem;
+      margin-top: 0.2rem;
+      text-align: center;
+      align-content: center;
+      font-size: 1.8rem;
     }
   }
-
-  &__content {
-    padding: $spacing-lg;
-    font-size: $font-size-sm;
-  }
-
-  &__text {
-    margin: 0;
-    line-height: 1.5;
-
-    &:not(:first-child) {
-      margin-top: $spacing-md;
+  &__copyright {
+    align-content: center;
+    text-align: center;
+    height: 12.5rem;
+    font-size: 1.375rem;
+    &-content {
+      line-height: 2;
     }
   }
 }

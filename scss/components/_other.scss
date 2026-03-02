@@ -1,0 +1,28 @@
+.bold-36 {
+    font-size: 2.25rem;
+    letter-spacing: 0rem;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
+    &__diagram {
+        width: 69.125rem;
+        height: 24.1875rem;
+    }
+}
+
+.pension-info__title {
+    font-size: 2.25rem;
+    letter-spacing: 0;
+    margin-left: 1.5rem;
+}
+
+.pension-info__list {
+    font-size: 2.25rem;
+    letter-spacing: 0;
+    margin-left: 8rem;
+}

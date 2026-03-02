@@ -1,0 +1,46 @@
+// Colors
+$primary-green: #327C49;
+$primary-blue: #327C7D;
+$accent: #EE8257;
+$bg-beige: #EBE1D2;
+$light-beige: #FBF0DF;
+$gold-beige: #BAA272;
+$golden-beige:#BAB472;
+
+$brown: #8b6950;
+$dark-brown: #6f3f2b;
+$white: #ffffff;
+$black: #000000;
+
+// Typography
+$font-primary: 'Yantramanav', 'M PLUS 1p', 'Kaisei Opti', 'Shippori Mincho B1' sans-serif;
+$font-shippori: 'Shippori Mincho B1', serif;
+
+$font-size-sm: 1.375rem;
+$font-size-base: 2rem;
+$font-size-lg: 2.25rem;
+$font-size-xl: 2.5rem;
+$font-size-2xl: 3rem;
+$font-size-3xl: 4rem;
+$font-size-4xl: 6rem;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 0.75rem;
+$spacing-lg: 1rem;
+$spacing-xl: 1.5rem;
+$spacing-2xl: 2.125rem;
+$spacing-3xl: 3rem;
+
+// Breakpoints (converted from px based on 16px root, xl corresponds to full 1920px width)
+$breakpoint-sm: 40rem;   // 640px
+$breakpoint-md: 48rem;   // 768px
+$breakpoint-lg: 64rem;   // 1024px
+$breakpoint-xl: 120rem;  // 1920px (full HD)
+
+// Border radius
+$border-radius: 0.25rem;
+
+// Shadows
+$shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.1);

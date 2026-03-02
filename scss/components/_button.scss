@@ -1,0 +1,54 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: $border-radius;
+  transition: all 0.3s ease;
+  font-family: $font-shippori;
+  border-color: $white;
+  box-shadow: $shadow-inner;
+  color: $white;
+  
+  &--green {
+    background-color: $primary-green;
+    &:hover {
+      background-color: darken($primary-green, 10%);
+    }
+  }
+  
+  &--blue {
+    background-color: $primary-blue;
+    &:hover {
+      background-color: darken($primary-blue, 10%);
+    }
+  }
+
+  &--accent {
+    background-color: $accent;
+    &:hover {
+      background-color: darken($accent, 10%);
+    }
+  }
+  
+  &--small {
+    font-size: $font-size-sm;
+    border: 0.3125rem solid;
+    width: 14rem;
+    height: 3.48125rem;
+  }
+
+  &--medium {
+    font-size: $font-size-xl;
+    border: 0.625rem solid;
+    width: 15.3125rem;
+    height: 5.5rem;
+  }
+
+  &--large {
+    font-size: $font-size-2xl;
+    border: 0.625rem solid;
+    width: 35.1875rem;
+    height: 8.75rem;
+  }
+}

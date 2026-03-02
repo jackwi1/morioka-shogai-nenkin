@@ -1,0 +1,44 @@
+.footer {
+  background-color: $brown;
+  color: $white;
+  border-top: 1px solid #705a3f;
+  text-align: center;
+
+  &__nav {
+    border-bottom: 1px solid #705a3f;
+  }
+
+  &__list {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    flex: 1;
+    padding: $spacing-md;
+    border-right: 1px solid #705a3f;
+    font-size: $font-size-sm;
+    line-height: 1.5;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__content {
+    padding: $spacing-lg;
+    font-size: $font-size-sm;
+  }
+
+  &__text {
+    margin: 0;
+    line-height: 1.5;
+
+    &:not(:first-child) {
+      margin-top: $spacing-md;
+    }
+  }
+}

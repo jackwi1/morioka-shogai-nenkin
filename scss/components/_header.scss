@@ -1,0 +1,64 @@
+.header {
+  background-color: $light-beige;
+  width: 100%;
+  z-index: 10;
+  
+  &__content {
+    padding: $spacing-sm $spacing-2xl 0.65rem 2.45rem;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  &__brand {
+    font-size: $font-size-base;
+    color: $dark-brown;
+    line-height: 1.4;
+
+    &-title {
+      font-size: $font-size-lg;
+      display: block;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__nav {
+    background-color: $brown;
+    width: 100%;
+    &__list {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+
+    }
+
+    &__item {
+      flex: 1;
+      height: 3.125rem;
+      text-align: center;
+      align-content: center;
+      color: $white;
+      border-right: 1px solid $white;
+      font-size: $font-size-sm;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &--active {
+        background-color: darken($brown, 10%);
+      }
+
+      &:hover {
+        background-color: lighten($brown, 5%);
+        transition: background-color 0.3s ease;
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.section {
+    position: relative;
+    width: 93.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        font-size: 4rem;
+        text-align: center;
+        color: #8B6950;
+        position: relative;
+        font-family: "Yantramanav", 'M PLUS 1p', 'Kaisei Opti', sans-serif;
+        font-weight: 700;
+        width: fit-content;
+        letter-spacing: -0.03rem;
+        line-height: 1.25;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 98%;
+            height: 0.3125rem;
+            background-color: #8B6950;
+        }
+
+        // The speech-bubble tail on the right
+        &::before {
+            content: "";
+            position: absolute;
+        }
+    }
+    &__content {
+        width: 100%;
+        position: relative;
+        background-color: white;
+        border-width: 0.1875rem;
+        border-style: solid;
+        border-color: #D5D5D5;
+        margin-top: 6.25rem;
+        padding-top: 4.125rem;
+        padding-bottom: 4.125rem;
+        padding-left: 5.0625rem;
+        padding-right: 5rem;
+        font-family: "M PLUS 1p", 'Kaisei Opti', sans-serif;
+        letter-spacing: 0.25rem;
+        line-height: 1.65;
+        &__image{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &-image {
+                position: absolute;
+                right: 5rem;
+                top: 3rem;
+                width: 15.625rem;
+                height: 19.875rem;
+            }
+            &-list{
+                letter-spacing: 0rem;
+                font-size: 2.25rem;
+                line-height: 1.5;
+                padding-left: 2rem;
+                list-style-type: disc;
+            }
+        }
+        &__title {
+            font-size: 2.35rem;
+            // Circle number using ::before
+            &::before {
+            content: attr(data-number);
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            font-weight: bold;
+            vertical-align: middle;
+            }
+        }
+        &__numberlist {
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        &-far {
+            margin-top: 7.1875rem;
+            padding-top: 3.3rem;
+            padding-bottom: 3.65rem;
+            padding-left: 5.0625rem;
+            padding-right: 5rem;
+            font-family: "M PLUS 1p", 'Kaisei Opti', sans-serif;
+            letter-spacing: 0.25rem;
+            line-height: 2.5;
+            background-color: white;
+            border-width: 0.1875rem;
+            border-style: solid;
+            border-color: #D5D5D5;       
+            text-align: center;         
+        }
+    }
+}
+
+.section__last {
+    font-family: "M PLUS 1p", 'Kaisei Opti', sans-serif;
+    letter-spacing: 0rem;
+    line-height: 1.2;
+    font-size: 4rem;
+    width: 93.75rem;
+    margin-left: 9rem;
+    position: relative;
+    &-title{
+        font-size: 4rem;
+    }
+    &-content {
+        margin-top: 3rem;
+        line-height: 1.7;
+        font-size: 3rem;
+    }
+    &-image {
+        position: absolute;
+        right: 5rem;
+        top: -2rem;
+        width: 27.8125rem;
+        height: 27.1875rem;
+    }
+
+}

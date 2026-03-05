@@ -10,6 +10,10 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
+    flex-direction: column;
+    @include respond-to('xs') {
+      flex-direction: row;
+    }
   }
 
   &__brand {
@@ -25,7 +29,10 @@
 
   &__actions {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    @include respond-to('xs') {
+      flex-direction: column;
+    }
 
   }
 
@@ -36,7 +43,10 @@
       display: flex;
       flex-direction: row;
       margin: 0 auto;
-
+      flex-direction: column;
+      @include respond-to('xs') {
+        flex-direction: row;
+      }
     }
 
     &__item {
@@ -46,7 +56,13 @@
       align-content: center;
       color: $white;
       border-right: 1px solid $white;
-      font-size: $font-size-sm;
+      font-size: clamp(1rem, 1.4vw, $font-size-sm);
+
+      @include respond-to('sm') {
+        border-style: solid;
+        border-color: white;
+        border-width: 0.05rem;
+      }
 
       &:last-child {
         border-right: none;

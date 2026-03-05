@@ -3,8 +3,8 @@
   background-color: $bg-beige;
 
   &__slogan {
-    font-family: "Yantramanav", sans-serif;
-    font-size: 3rem; // ≈ 48px (assuming 1rem = 16px)
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: clamp(1rem, 3vw + 0.7rem ,3rem);
     text-align: center;
     padding-top: 6.25rem; // 100px
     padding-bottom: 6.1rem; // 94px

@@ -13,7 +13,7 @@ $white: #ffffff;
 $black: #000000;
 
 // Typography
-$font-primary: 'Yantramanav', 'M PLUS 1p', 'Kaisei Opti', 'Shippori Mincho B1' sans-serif;
+$font-primary: 'Noto Sans JP', 'M PLUS 1p', 'Kaisei Opti', 'Shippori Mincho B1' sans-serif;
 $font-shippori: 'Shippori Mincho B1', serif;
 
 $font-size-sm: 1.375rem;
@@ -34,10 +34,9 @@ $spacing-2xl: 2.125rem;
 $spacing-3xl: 3rem;
 
 // Breakpoints (converted from px based on 16px root, xl corresponds to full 1920px width)
-$breakpoint-sm: 40rem;   // 640px
-$breakpoint-md: 48rem;   // 768px
-$breakpoint-lg: 64rem;   // 1024px
-$breakpoint-xl: 120rem;  // 1920px (full HD)
+$breakpoint-xs: 30rem + 0.1rem;
+$breakpoint-sm: 40rem + 0.1rem;   // 640px
+$breakpoint-xl: 120rem + 0.1rem;  // 1920px (full HD)
 
 // Border radius
 $border-radius: 0.25rem;

@@ -1,25 +1,60 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
 .background {
   position: relative;
   background-color: $bg-beige;
 
   &__slogan {
     font-family: "Noto Sans JP", sans-serif;
-    font-size: clamp(1rem, 3vw + 0.7rem ,3rem);
+    font-size: clamp(1rem, 4vw, 2.5rem);  /* Fluid sizing */
     text-align: center;
-    padding-top: 6.25rem; // 100px
-    padding-bottom: 6.1rem; // 94px
+    padding-top: 2rem;  /* Mobile (0-639px) */
+    padding-bottom: 2rem;
     letter-spacing: -0.03rem;
     margin: 0;
+    
+    @include respond-to('sm') {
+      padding-top: 3.5rem;  /* 640px+ */
+      padding-bottom: 3.5rem;
+    }
+    
+    @include respond-to('md') {
+      padding-top: 4.5rem;  /* 768px+ */
+      padding-bottom: 4.5rem;
+    }
+    
+    @include respond-to('lg') {
+      padding-top: 5.5rem;  /* 1024px+ */
+      padding-bottom: 5.5rem;
+    }
+    
+    @include respond-to('xl') {
+      padding-top: 6.25rem;  /* 1280px+ */
+      padding-bottom: 6.1rem;
+    }
+  }
+
+  /* Hide decorative rectangles on mobile */
+  @media (max-width: 639px) {
+    &__rectangle1,
+    &__rectangle2,
+    &__rectangle3,
+    &__rectangle4,
+    &__rectangle5,
+    &__environment {
+      display: none;
+    }
   }
 
   &__rectangle1 {
-    width: 106.875rem; // 1710px ÷ 16 = 106.875rem
-    height: 7.8125rem; // 125px ÷ 16 = 7.8125rem
+    width: 106.875rem;
+    height: 7.8125rem;
     background-color: $gold-beige;
-    // Position to the right
-    margin-left: auto; // pushes it to the right
+    margin-left: auto;
     margin-right: 0;
   }
+  
   &__rectangle2 {
     width: 31.0625rem;
     height: 21.145rem;
@@ -28,6 +63,7 @@
     margin-top: 41.543rem;
     margin-right: auto;
     margin-left: 0;
+    
     &::after {
       content: "";
       position: absolute;
@@ -39,14 +75,16 @@
       top: 0;
     }
   }
+  
   &__rectangle3 {
     position: relative;
     width: 9.875rem;
     height: 15.665rem;
     background-color: #729aba;
     margin-top: 71.493rem;
-    margin-left: 0; // pushes it to the right
+    margin-left: 0;
     margin-right: auto;
+    
     &::after {
       content: "";
       position: absolute;
@@ -58,18 +96,17 @@
       bottom: 0;
     }
   }
+  
   &__rectangle4 {
-    width: 69.0625rem; // 1105px
-    height: 31.6875rem; // 507px
+    width: 69.0625rem;
+    height: 31.6875rem;
     background-color: #ba7273;
 
-    // Position at right
-    margin-left: auto; // pushes to the right
+    margin-left: auto;
     margin-right: 0;
-
-    // Top spacing as requested
     margin-top: 46.465rem;
   }
+  
   &__rectangle5 {
     width: 69.0625rem;
     height: 31.6875rem;
@@ -79,6 +116,7 @@
     margin-left: 0;
     margin-right: auto;
   }
+  
   &__environment {
     position: absolute;
     top: 20rem;

@@ -1,17 +1,21 @@
-// Utilities
-@import 'utilities/variables';
-@import 'utilities/mixins';
-@import 'utilities/reset';
+// Utilities using new module syntax - both used and forwarded
+@use 'utilities/variables' as *;
+@use 'utilities/mixins' as *;
+@use 'utilities/reset';
+
+@forward 'utilities/variables';
+@forward 'utilities/mixins';
+@forward 'utilities/reset';
 
 // Components
-@import 'components/header';
-@import 'components/hero';
-@import 'components/button';
-@import 'components/footer';
-@import 'components/background';
-@import 'components/contact';
-@import 'components/article';
-@import 'components/section';
-@import 'components/main';
-@import 'components/other';
-@import 'components/fag';
+@use 'components/header';
+@use 'components/hero';
+@use 'components/button';
+@use 'components/footer';
+@use 'components/background';
+@use 'components/contact';
+@use 'components/article';
+@use 'components/section';
+@use 'components/main';
+@use 'components/other';
+@use 'components/fag';

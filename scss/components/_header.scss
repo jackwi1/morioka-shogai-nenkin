@@ -1,3 +1,7 @@
+@use 'sass:color';
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
 .header {
   background-color: $light-beige;
   width: 100%;
@@ -5,35 +9,45 @@
   position: absolute;
   
   &__content {
-    padding: $spacing-sm $spacing-2xl 0.65rem 2.45rem;  
+    padding: $spacing-sm $spacing-lg 0.65rem $spacing-lg;  /* Mobile: reduced padding */
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    flex-direction: column;
-    @include respond-to('xs') {
-      flex-direction: row;
+    flex-direction: row;
+    
+    @include respond-to('md') {
+      padding: $spacing-sm $spacing-2xl 0.65rem 2.45rem;  /* Tablet+: original padding */
     }
   }
 
   &__brand {
-    font-size: $font-size-base;
+    font-size: 1rem;  /* Mobile: smaller font */
     color: $dark-brown;
     line-height: 1.4;
+    
+    @include respond-to('md') {
+      font-size: $font-size-base;  /* Tablet+: original font */
+    }
 
     &-title {
-      font-size: $font-size-lg;
+      font-size: 1rem;  /* Mobile: smaller */
       display: block;
+      
+      @include respond-to('md') {
+        font-size: $font-size-lg;  /* Tablet+: original */
+      }
     }
   }
 
   &__actions {
     display: flex;
-    flex-direction: row;
-    @include respond-to('xs') {
-      flex-direction: column;
+    flex-direction: column;
+    gap: 0.5rem;  /* Mobile: small gap */
+    
+    @include respond-to('md') {
+      gap: 0;  /* Tablet+: no gap */
     }
-
   }
 
   &__nav {
@@ -41,26 +55,33 @@
     width: 100%;
     &__list {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;  /* Mobile: vertical */
       margin: 0 auto;
-      flex-direction: column;
-      @include respond-to('xs') {
-        flex-direction: row;
+      @include respond-to('sm') {
+        flex-direction: row;  /* 640px+: horizontal */
       }
     }
 
     &__item {
       flex: 1;
-      height: 3.125rem;
+      height: 2.5rem;  /* Mobile: reduced height */
       text-align: center;
       align-content: center;
       color: $white;
-      border-right: 1px solid $white;
-      font-size: clamp(1rem, 1.4vw, $font-size-sm);
-
+      border-right: none;  /* Mobile: no right border */
+      border-bottom: 1px solid $white;  /* Mobile: bottom border */
+      font-size: 0.75rem;  /* Mobile: smaller font */
+      
       @include respond-to('sm') {
-        border-style: solid;
-        border-color: white;
+        height: 2.8rem;  /* 640px+: slightly taller */
+        font-size: 0.875rem;
+        border-right: 1px solid $white;
+        border-bottom: none;
+      }
+      
+      @include respond-to('md') {
+        height: 3.125rem;  /* 768px+: original height */
+        font-size: clamp(0.875rem, 3vw, $font-size-sm);
         border-width: 0.05rem;
       }
 
@@ -69,11 +90,11 @@
       }
 
       &--active {
-        background-color: darken($brown, 10%);
+        background-color: color.adjust($brown, $lightness: -10%);
       }
 
       &:hover {
-        background-color: lighten($brown, 5%);
+        background-color: color.adjust($brown, $lightness: 5%);
         transition: background-color 0.3s ease;
       }
     }

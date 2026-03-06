@@ -1,45 +1,183 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
 .bold-36 {
-    font-size: 2.25rem;
+    font-size: 1rem;  /* Mobile (0-639px) */
     letter-spacing: 0rem;
+    
+    @include respond-to('sm') {
+      font-size: 1.25rem;  /* 640px+ */
+    }
+    
+    @include respond-to('md') {
+      font-size: 1.5rem;  /* 768px+ */
+    }
+    
+    @include respond-to('lg') {
+      font-size: 1.875rem;  /* 1024px+ */
+    }
+    
+    @include respond-to('xl') {
+      font-size: 2.25rem;  /* 1280px+ */
+    }
 }
 
 .bold__43 {
-    font-size: 2.7rem;
+    font-size: 1.25rem;  /* Mobile (0-639px) */
     letter-spacing: -0.1rem;
+    
+    @include respond-to('sm') {
+      font-size: 1.5rem;  /* 640px+ */
+    }
+    
+    @include respond-to('md') {
+      font-size: 1.875rem;  /* 768px+ */
+    }
+    
+    @include respond-to('lg') {
+      font-size: 2.25rem;  /* 1024px+ */
+    }
+    
+    @include respond-to('xl') {
+      font-size: 2.7rem;  /* 1280px+ */
+    }
 }
 
 .icon {
     position: absolute;
-    font-size: 3rem;
-    top: 3rem;
-    left: 3rem;
+    font-size: 1.25rem;  /* Mobile (0-639px) */
+    top: 1rem;
+    left: 1rem;
+    
+    @include respond-to('sm') {
+      font-size: 1.75rem;  /* 640px+ */
+      top: 1.5rem;
+      left: 1.5rem;
+    }
+    
+    @include respond-to('md') {
+      font-size: 2.25rem;  /* 768px+ */
+      top: 2rem;
+      left: 2rem;
+    }
+    
+    @include respond-to('lg') {
+      font-size: 2.75rem;  /* 1024px+ */
+    }
+    
+    @include respond-to('xl') {
+      font-size: 3rem;  /* 1280px+ */
+      top: 3rem;
+      left: 3rem;
+    }
 }
 
 .image {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3.125rem;
-    margin-bottom: 3.125rem;
+    margin-top: 1rem;  /* Mobile (0-639px) */
+    margin-bottom: 1rem;
+    
+    @include respond-to('sm') {
+      margin-top: 1.5rem;  /* 640px+ */
+      margin-bottom: 1.5rem;
+    }
+    
+    @include respond-to('lg') {
+      margin-top: 2.5rem;  /* 1024px+ */
+      margin-bottom: 2.5rem;
+    }
+    
+    @include respond-to('xl') {
+      margin-top: 3.125rem;  /* 1280px+ */
+      margin-bottom: 3.125rem;
+    }
+    
     &__diagram {
-        width: 69.125rem;
-        height: 24.1875rem;
+        width: 90%;  /* Mobile: responsive width */
+        max-width: 69.125rem;
+        height: auto;
+        aspect-ratio: 69.125 / 24.1875;
+        
+        @include respond-to('xl') {
+          width: 69.125rem;  /* 1280px+ */
+          height: 24.1875rem;
+        }
     }
 }
 
 .pension-info__title {
-    font-size: 2.25rem;
+    font-size: 1rem;  /* Mobile (0-639px) */
     letter-spacing: 0;
-    margin-left: 1.5rem;
+    margin-left: 0.5rem;
+    
+    @include respond-to('sm') {
+      font-size: 1.125rem;  /* 640px+ */
+      margin-left: 0.75rem;
+    }
+    
+    @include respond-to('md') {
+      font-size: 1.375rem;  /* 768px+ */
+      margin-left: 1rem;
+    }
+    
+    @include respond-to('lg') {
+      font-size: 1.75rem;  /* 1024px+ */
+    }
+    
+    @include respond-to('xl') {
+      font-size: 2.25rem;  /* 1280px+ */
+      margin-left: 1.5rem;
+    }
 }
 
 .pension-info__list {
-    font-size: 2.25rem;
+    font-size: 1rem;  /* Mobile (0-639px) */
     letter-spacing: 0;
-    margin-left: 8rem;
+    margin-left: 1rem;
+    
+    @include respond-to('sm') {
+      font-size: 1.125rem;  /* 640px+ */
+      margin-left: 1.5rem;
+    }
+    
+    @include respond-to('md') {
+      font-size: 1.5rem;  /* 768px+ */
+      margin-left: 2.5rem;
+    }
+    
+    @include respond-to('lg') {
+      font-size: 1.875rem;  /* 1024px+ */
+      margin-left: 4rem;
+    }
+    
+    @include respond-to('xl') {
+      font-size: 2.25rem;  /* 1280px+ */
+      margin-left: 8rem;
+    }
 }
 
 .margintop3 {
-    margin-top: 3rem;
-    margin-bottom: 1.8rem;
+    margin-top: 1rem;  /* Mobile (0-639px) */
+    margin-bottom: 0.5rem;
+    
+    @include respond-to('sm') {
+      margin-top: 1.5rem;  /* 640px+ */
+      margin-bottom: 1rem;
+    }
+    
+    @include respond-to('md') {
+      margin-top: 2rem;  /* 768px+ */
+      margin-bottom: 1.2rem;
+    }
+    
+    @include respond-to('lg') {
+      margin-top: 2.5rem;  /* 1024px+ */
+    }
+    
+    @include respond-to('xl') {
+      margin-top: 3rem;  /* 1280px+ */
+      margin-bottom: 1.8rem;
+    }
 }

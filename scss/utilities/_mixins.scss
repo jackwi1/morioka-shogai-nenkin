@@ -1,16 +1,44 @@
-// Media Queries
+@use 'variables' as *;
+
+// Media Queries – Multiple breakpoints (mobile-first)
+// Usage: @include respond-to('sm') { styles for 640px+ }
+//        @include respond-to('md') { styles for 768px+ }
+//        @include respond-to('lg') { styles for 1024px+ }
+//        @include respond-to('xl') { styles for 1280px+ }
+//        @include respond-to('2xl') { styles for 1536px+ }
+
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == 'xs' {
-    @media (min-width: $breakpoint-xs) {
-      @content;
-    }
-  } @else if $breakpoint == 'sm' {
+  @if $breakpoint == 'sm' {
     @media (min-width: $breakpoint-sm) {
       @content;
     }
-  } @else if $breakpoint == 'xl' {
+  }
+  @else if $breakpoint == 'md' {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  }
+  @else if $breakpoint == 'lg' {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+  @else if $breakpoint == 'xl' {
     @media (min-width: $breakpoint-xl) {
       @content;
     }
   }
+  @else if $breakpoint == '2xl' {
+    @media (min-width: $breakpoint-2xl) {
+      @content;
+    }
+  }
 }
+
+// Shorthand mixins for convenience
+@mixin tablet { @include respond-to('md') { @content; } }
+@mixin desktop { @include respond-to('lg') { @content; } }
+@mixin large-desktop { @include respond-to('xl') { @content; } }
+@mixin extra-large { @include respond-to('2xl') { @content; } }
+
+

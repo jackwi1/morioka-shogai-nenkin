@@ -61,14 +61,14 @@
             }
             &-list{
                 letter-spacing: 0rem;
-                font-size: 2.25rem;
+                font-size: 1.75rem;
                 line-height: 1.5;
                 padding-left: 2rem;
                 list-style-type: disc;
             }
         }
         &__title {
-            font-size: 2.35rem;
+            font-size: 1.75rem;
             // Circle number using ::before
             &::before {
             content: attr(data-number);
@@ -110,25 +110,121 @@
     font-family: "M PLUS 1p", 'Kaisei Opti', sans-serif;
     letter-spacing: 0rem;
     line-height: 1.2;
-    font-size: 4rem;
-    width: 93.75rem;
-    margin-left: 9rem;
+    font-size: 1.5rem;  /* Mobile */
+    width: 90%;  /* Mobile */
+    margin-left: 0;  /* Mobile */
     position: relative;
+    
+    @include respond-to('sm') {
+      font-size: 2rem;  /* 640px+ */
+      width: 85%;
+      margin-left: 1rem;
+    }
+    
+    @include respond-to('md') {
+      font-size: 2.5rem;  /* 768px+ */
+      width: 80%;
+      margin-left: 2rem;
+    }
+    
+    @include respond-to('lg') {
+      font-size: 3.25rem;  /* 1024px+ */
+      width: 75%;
+      margin-left: 5rem;
+    }
+    
+    @include respond-to('xl') {
+      font-size: 4rem;  /* 1280px+ */
+      width: 93.75rem;
+      margin-left: 9rem;
+    }
+    
     &-title{
-        font-size: 4rem;
+        font-size: 1.5rem;  /* Mobile */
+        
+        @include respond-to('sm') {
+          font-size: 2rem;  /* 640px+ */
+        }
+        
+        @include respond-to('md') {
+          font-size: 2.5rem;  /* 768px+ */
+        }
+        
+        @include respond-to('lg') {
+          font-size: 3.25rem;  /* 1024px+ */
+        }
+        
+        @include respond-to('xl') {
+          font-size: 4rem;  /* 1280px+ */
+        }
     }
+    
     &-content {
-        margin-top: 3rem;
-        line-height: 1.7;
-        font-size: 3rem;
+        margin-top: 1rem;  /* Mobile */
+        line-height: 1.5;  /* Mobile */
+        font-size: 1rem;  /* Mobile */
+        
+        @include respond-to('sm') {
+          margin-top: 1.5rem;  /* 640px+ */
+          line-height: 1.6;
+          font-size: 1.25rem;
+        }
+        
+        @include respond-to('md') {
+          margin-top: 2rem;  /* 768px+ */
+          line-height: 1.7;
+          font-size: 1.75rem;
+        }
+        
+        @include respond-to('lg') {
+          margin-top: 2.5rem;  /* 1024px+ */
+          line-height: 1.8;
+          font-size: 2.25rem;
+        }
+        
+        @include respond-to('xl') {
+          margin-top: 3rem;  /* 1280px+ */
+          line-height: 1.7;
+          font-size: 3rem;
+        }
     }
+    
     &-image {
         position: absolute;
-        right: 5rem;
-        top: -2rem;
-        width: 27.8125rem;
-        height: 27.1875rem;
+        right: 1rem;  /* Mobile */
+        top: 0;  /* Mobile */
+        width: 60%;  /* Mobile */
+        max-width: 20rem;
+        height: auto;
+        aspect-ratio: 1 / 0.98;
+        
+        @include respond-to('sm') {
+          right: 1.5rem;  /* 640px+ */
+          width: 55%;
+          max-width: 22rem;
+        }
+        
+        @include respond-to('md') {
+          right: 2rem;  /* 768px+ */
+          width: 50%;
+          max-width: 24rem;
+        }
+        
+        @include respond-to('lg') {
+          right: 3rem;  /* 1024px+ */
+          top: -1rem;
+          width: 45%;
+          max-width: 26rem;
+        }
+        
+        @include respond-to('xl') {
+          right: 5rem;  /* 1280px+ */
+          top: -2rem;
+          width: auto;
+          max-width: none;
+          height: 27.1875rem;
+          width: 27.8125rem;
+        }
     }
-
 }
 

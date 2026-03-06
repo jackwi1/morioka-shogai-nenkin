@@ -1,20 +1,74 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
 .article {
     position: absolute;
     width: 100%;
     top: 0;
-    margin-top: 75.875rem;
+    margin-top: 25rem;  /* Mobile (0-639px) */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12.5rem;
+    gap: 4rem;  /* Mobile: smaller gap */
+    
+    @include respond-to('sm') {
+      margin-top: 35rem;  /* 640px+ */
+      gap: 6rem;
+    }
+    
+    @media (max-width: 799px) {
+      margin-top: 40rem;  /* Smaller than 800px: increased margin */
+    }
+    
+    @media (min-width: 645px) and (max-width: 845px) {
+      top: 42rem;  /* Position using top to avoid hero overlap */
+      margin-top: 0;
+    }
+    
+    @include respond-to('md') {
+      margin-top: 45rem;  /* 768px+ */
+      gap: 8rem;
+    }
+    
+    @include respond-to('lg') {
+      margin-top: 60rem;  /* 1024px+ */
+      gap: 10rem;
+    }
+    
+    @include respond-to('xl') {
+      margin-top: 75.875rem;  /* 1280px+ */
+      gap: 12.5rem;
+    }
 }
 
 .article-closer {
     position: absolute;
     width: 100%;
     top: 0;
-    margin-top: 18.95rem;
+    margin-top: 8rem;  /* Mobile (0-639px) */
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    @include respond-to('sm') {
+      margin-top: 11rem;  /* 640px+ */
+    }
+    
+    @include respond-to('md') {
+      margin-top: 14rem;  /* 768px+ */
+    }
+    
+    @include respond-to('lg') {
+      margin-top: 16rem;  /* 1024px+ */
+    }
+    
+    @include respond-to('xl') {
+      margin-top: 18.95rem;  /* 1280px+ */
+    }
+}
+
+@media (max-width: 799px) {
+  .article .section__title {
+    font-size: 2rem;  /* Smaller font for article titles on small devices */
+  }
 }

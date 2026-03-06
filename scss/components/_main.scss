@@ -1,5 +1,12 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
 .main {
     position: relative;
+    margin-top: 9rem;
+    @include respond-to('sm') {
+      top: -11.25rem;
+    }
 }
 
 .main-pension {
